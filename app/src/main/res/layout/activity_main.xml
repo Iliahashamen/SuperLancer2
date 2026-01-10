@@ -8,27 +8,21 @@
     android:layout_height="match_parent"
     android:background="#616161">
 
-    <View
-        android:id="@+id/line1"
-        android:layout_width="4dp"
-        android:layout_height="0dp"
-        android:background="#FFEB3B"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.33"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <View android:id="@+id/line1" android:layout_width="4dp" android:layout_height="0dp" android:background="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/line2"
-        android:layout_width="4dp"
-        android:layout_height="0dp"
-        android:background="#FFEB3B"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.66"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <View android:id="@+id/line2" android:layout_width="4dp" android:layout_height="0dp" android:background="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+    <View android:id="@+id/line3" android:layout_width="4dp" android:layout_height="0dp" android:background="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+    <View android:id="@+id/line4" android:layout_width="4dp" android:layout_height="0dp" android:background="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvScore"
@@ -46,6 +40,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvOdometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0 m"
+        android:fontFamily="monospace"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="#99000000"
+        android:padding="6dp"
+        app:layout_constraintStart_toStartOf="@id/tvScore"
+        app:layout_constraintTop_toBottomOf="@id/tvScore" />
+
     <LinearLayout
         android:id="@+id/livesContainer"
         android:layout_width="wrap_content"
@@ -55,71 +64,26 @@
         android:orientation="horizontal"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/heart1"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@drawable/ic_heart_life" />
-
-        <ImageView
-            android:id="@+id/heart2"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="5dp"
-            android:src="@drawable/ic_heart_life" />
-
-        <ImageView
-            android:id="@+id/heart3"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="5dp"
-            android:src="@drawable/ic_heart_life" />
+        <ImageView android:id="@+id/heart1" android:layout_width="35dp" android:layout_height="35dp" android:src="@drawable/ic_heart_life" />
+        <ImageView android:id="@+id/heart2" android:layout_width="35dp" android:layout_height="35dp" android:layout_marginStart="5dp" android:src="@drawable/ic_heart_life" />
+        <ImageView android:id="@+id/heart3" android:layout_width="35dp" android:layout_height="35dp" android:layout_marginStart="5dp" android:src="@drawable/ic_heart_life" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/ivCar"
-        android:layout_width="60dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="100dp"
+    <ImageView android:id="@+id/ivCar" android:layout_width="60dp" android:layout_height="100dp" android:layout_marginBottom="100dp"
         android:src="@drawable/ic_racer_car"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" />
 
-    <Button
-        android:id="@+id/btnLeft"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginStart="32dp"
-        android:text="&lt;"
-        android:textSize="32sp"
-        android:fontFamily="monospace"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+    <Button android:id="@+id/btnLeft" android:layout_width="80dp" android:layout_height="80dp" android:layout_marginBottom="32dp" android:layout_marginStart="32dp"
+        android:text="&lt;" android:textSize="32sp" android:fontFamily="monospace" android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" />
 
-    <Button
-        android:id="@+id/btnRight"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="32dp"
-        android:text="&gt;"
-        android:textSize="32sp"
-        android:fontFamily="monospace"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+    <Button android:id="@+id/btnRight" android:layout_width="80dp" android:layout_height="80dp" android:layout_marginBottom="32dp" android:layout_marginEnd="32dp"
+        android:text="&gt;" android:textSize="32sp" android:fontFamily="monospace" android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" />
 
-    <FrameLayout
-        android:id="@+id/obstacleContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+    <FrameLayout android:id="@+id/obstacleContainer" android:layout_width="match_parent" android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
 
     <LinearLayout
         android:id="@+id/menuLayout"
@@ -130,8 +94,7 @@
         android:orientation="vertical"
         android:padding="32dp"
         android:clickable="true"
-        android:focusable="true"
-        android:visibility="visible">
+        android:focusable="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -157,24 +120,32 @@
             android:gravity="center"
             android:inputType="textPersonName"/>
 
-        <Button
-            android:id="@+id/btnStartGame"
-            android:layout_width="200dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="START GAME"
-            android:fontFamily="monospace"
-            android:textSize="20sp"
-            android:backgroundTint="#4CAF50"
+            android:text="SELECT MODE:"
+            android:textColor="#FFFFFF"
             android:layout_marginBottom="10dp"/>
 
+        <Button android:id="@+id/btnModeSlow" android:layout_width="200dp" android:layout_height="wrap_content"
+            android:text="BUTTONS (SLOW)" android:backgroundTint="#2196F3" android:layout_marginBottom="5dp"/>
+
+        <Button android:id="@+id/btnModeFast" android:layout_width="200dp" android:layout_height="wrap_content"
+            android:text="BUTTONS (FAST)" android:backgroundTint="#F44336" android:layout_marginBottom="5dp"/>
+
+        <Button android:id="@+id/btnModeSensor" android:layout_width="200dp" android:layout_height="wrap_content"
+            android:text="SENSORS" android:backgroundTint="#9C27B0" android:layout_marginBottom="20dp"/>
+
         <Button
-            android:id="@+id/btnExitApp"
+            android:id="@+id/btnHighScores"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="EXIT APP"
-            android:fontFamily="monospace"
-            android:textSize="20sp"
-            android:backgroundTint="#F44336"/>
+            android:text="🏆 TOP 10 PLAYERS"
+            android:backgroundTint="#FF9800"
+            android:layout_marginBottom="5dp"/>
+
+        <Button android:id="@+id/btnExitApp" android:layout_width="200dp" android:layout_height="wrap_content"
+            android:text="EXIT APP" android:backgroundTint="#607D8B"/>
 
     </LinearLayout>
 
@@ -194,52 +165,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="GAME OVER"
-            android:fontFamily="monospace"
             android:textColor="#F44336"
             android:textSize="36sp"
             android:textStyle="bold"
             android:layout_marginBottom="20dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TOP 5 PLAYERS"
-            android:fontFamily="monospace"
-            android:textColor="#03DAC5"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dp"/>
+        <Button android:id="@+id/btnPlayAgain" android:layout_width="200dp" android:layout_height="wrap_content"
+            android:text="PLAY AGAIN" android:backgroundTint="#2196F3" android:layout_marginBottom="10dp"/>
+
+        <Button android:id="@+id/btnExitGame" android:layout_width="200dp" android:layout_height="wrap_content"
+            android:text="MAIN MENU" android:backgroundTint="#FF9800"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/highScoreLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
 
         <TextView
-            android:id="@+id/tvHighScores"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="No records yet..."
-            android:fontFamily="monospace"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:gravity="center"
-            android:layout_marginBottom="30dp"/>
+            android:text="TOP SCORES"
+            android:textAlignment="center"
+            android:textColor="#FFEB3B"
+            android:textSize="24sp"
+            android:padding="10dp"
+            android:textStyle="bold"/>
+
+        <FrameLayout
+            android:id="@+id/frame_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#222222"/>
+
+        <FrameLayout
+            android:id="@+id/frame_map"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
         <Button
-            android:id="@+id/btnPlayAgain"
-            android:layout_width="200dp"
+            android:id="@+id/btnCloseScores"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PLAY AGAIN"
-            android:fontFamily="monospace"
-            android:textSize="20sp"
-            android:backgroundTint="#2196F3"
-            android:layout_marginBottom="10dp"/>
-
-        <Button
-            android:id="@+id/btnExitGame"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="MAIN MENU"
-            android:fontFamily="monospace"
-            android:textSize="20sp"
-            android:backgroundTint="#FF9800"/>
-
+            android:text="BACK TO MENU"
+            android:backgroundTint="#F44336"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
